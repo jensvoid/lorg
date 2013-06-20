@@ -1,0 +1,17 @@
+--------------------------------------------------
+HOW TO VISUALIZE OUR RESULTS IN IN SIMILE-WIDGETS
+--------------------------------------------------
+
+For an experimental map view:
+
+- use JSON output mode (-o json)
+- if summerization enabled (default), move output file to './exhibit/summary/results.json'
+- if summerization enabled (default), open './exhibit/summary/results.hmtl' in your web browser
+- if summerization disabled (-n), move output file to './exhibit/details/results.json'
+- if summerization disabled (-n), open './exhibit/details/results.hmtl' in your web browser
+
+For an experimental timline view of the results:
+
+- use XML output mode (-o xml)
+- move output file to './timeline/results.xml'
+- open './timeline/results.hmtl' in your web browser

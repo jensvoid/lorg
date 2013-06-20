@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Webforensic Results</title>
+    <link rel='stylesheet' href='styles.css' type='text/css' />
+    <link rel="alternate" type="application/rdf+xml" href="doap.rdf" />
+<script>
+  Timeline_ajax_url="timeline_ajax/simile-ajax-api.js";
+  Timeline_urlPrefix='timeline_js/';       
+  Timeline_parameters='bundle=true';
+</script>
+<script src="timeline_js/timeline-api.js" type="text/javascript">
+</script>
+    <script>
+        var tl;
+        function onLoad() {
+            var eventSource = new Timeline.DefaultEventSource();
+            
+            var zones = [];
+            var zones2 = [];
+            var zones3 = [];
+            var zones4 = [];
+            var zones5 = [];
+
+            var theme = Timeline.ClassicTheme.create();
+            theme.event.bubble.width = 250;
+
+            var date = new Date();
+            var bandInfos = [
+                Timeline.createHotZoneBandInfo({
+                    width:          "76%", 
+                    intervalUnit:   Timeline.DateTime.SECOND,
+                    intervalPixels: 120,
+                    zones:          zones,
+                    eventSource:    eventSource,
+                    date:           date,
+                    timeZone:       +1
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "6%", 
+                    intervalUnit:   Timeline.DateTime.MINUTE,
+                    intervalPixels: 100,
+                    zones:          zones2,
+                    eventSource:    eventSource,
+                    date:           date, 
+                    timeZone:       +1,
+                    overview:       true
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "6%", 
+                    intervalUnit:   Timeline.DateTime.HOUR,
+                    intervalPixels: 100,
+                    zones:          zones3,
+                    eventSource:    eventSource,
+                    date:           date, 
+                    timeZone:       +1,
+                    overview:       true
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "6%", 
+                    intervalUnit:   Timeline.DateTime.DAY,
+                    intervalPixels: 100,
+                    zones:          zones4,
+                    eventSource:    eventSource,
+                    date:           date, 
+                    timeZone:       +1,
+                    overview:       true
+                }),
+                Timeline.createHotZoneBandInfo({
+                    width:          "6%", 
+                    intervalUnit:   Timeline.DateTime.MONTH,
+                    intervalPixels: 100,
+                    zones:          zones5,
+                    eventSource:    eventSource,
+                    date:           date, 
+                    timeZone:       +1,
+                    overview:       true
+                })
+            ];
+            bandInfos[1].syncWith = 0;
+            bandInfos[1].highlight = true;
+            bandInfos[2].syncWith = 0;
+            bandInfos[2].highlight = true;
+            bandInfos[3].syncWith = 0;
+            bandInfos[3].highlight = true;
+            bandInfos[4].syncWith = 0;
+            bandInfos[4].highlight = true;
+            
+            tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
+            tl.loadXML("results.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+        }
+        
+        var resizeTimerID = null;
+        function onResize() {
+            if (resizeTimerID == null) {
+                resizeTimerID = window.setTimeout(function() {
+                    resizeTimerID = null;
+                    tl.layout();
+                }, 500);
+            }
+        }
+        
+    </script>
+    <style type="text/css">
+        .t-highlight1 { background-color: #ccf; }
+        .p-highlight1 { background-color: #fcc; }
+        .timeline-highlight-label-start .label_t-highlight1 { color: #f00; }
+        .timeline-highlight-label-end .label_t-highlight1 { color: #aaf; }
+        .timeline-band-events .important { color: #f00; }
+        .timeline-band-events .small-important { background: #c00; }
+    </style>
+
+  </head>
+  <body onload="onLoad();" onresize="onResize();">
+
+    <div id="header">
+      <h1>Webforensik Timeline</h1>
+      <h2>Web Widget for Visualizing Temporal Data</h2>
+    </div>
+
+    <div id="content">
+      <table class="spaced-table" width="100%"><tr>
+        <td style="font-size: 150%; color: #888; width: 30em">
+          Webforensik XML data within a beautiful SIMILE widget - the interactive timline.<br>
+          Try dragging it horizontally or using your mouse-wheel. Click on each event for more details.
+        </td>
+      </tr></table>
+      <div id="tl" class="timeline-default" style="height: 390px; margin-top: 20px; margin-bottom: 50px;"></div>
+    </div>
+  </body>
+</html>

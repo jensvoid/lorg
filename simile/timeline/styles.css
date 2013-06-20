@@ -1,0 +1,9 @@
+@import url("http://www.simile-widgets.org/styles/common.css");
+
+.timeline-default {
+    font-family: Trebuchet MS, Helvetica, Arial, sans serif;
+    font-size: 8pt;
+    border: 1px solid #aaa;
+}
+
+.tape-special_event, .small-special_event { background-color: orange; }
