@@ -12,5 +12,4 @@ Bug of the day: there needs to be a symlink IDS -> . in the phpids/ folder.
 same folder as our report-*.html file. (TODO: integrate includes in lorg)
 
 
-Pre-alpha experimental!
 Will not work on Windows!
