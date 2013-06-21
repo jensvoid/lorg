@@ -5,10 +5,12 @@ LORG - Logfile Outlier Recognition and Gathering
 A tool for advanced HTTPD logfile security analysis. Pre-alpha.
 Previously developed as http://sourceforge.net/projects/webforensik/
 
-Bug of the day: there needs to be a symlinK IDS -> . in the phpids/ folder.
+Bug of the day: there needs to be a symlink IDS -> . in the phpids/ folder.
 (Meaning PHPIDS detection might not work if you just downloaded the zip file)
 
-2nd Bug of the day: the inculde/ (contains JS, CSS) folder must be in the
+2nd Bug of the day: the include/ folder (contains JS, CSS) must be in the
 same folder as our report-*.html file. (TODO: integrate includes in lorg)
 
+
+Pre-alpha experimental!
 Will not work on Windows!
