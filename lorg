@@ -39,7 +39,7 @@ static $allowed_input_types = array(
 );
 
 # define output types, client identifiers and attack vectors (don't change!)
-static $allowed_output_types = array('html', 'txt', 'json', 'xml', 'csv', 'sql', 'cef', 'raw');
+static $allowed_output_types = array('html', 'json', 'xml', 'csv');
 static $allowed_client_ident = array('host', 'session', 'user', 'logname', 'all');
 static $additional_attack_vectors = array('path', 'argnames', 'cookie', 'agent', 'all');
 
