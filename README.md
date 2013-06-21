@@ -1,4 +1,6 @@
 LORG - Logfile Outlier Recognition and Gathering
+(see also: From Old Irish lorg [ˈl̪ˠɔɾˠə]: trace,track, trail, path, cours, ...)
+
 
 A tool for advanced HTTPD logfile security analysis. Pre-alpha.
 Previously developed as http://sourceforge.net/projects/webforensik/
