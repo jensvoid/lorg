@@ -1,14 +1,16 @@
---------------------------------------------------
-HOW TO VISUALIZE OUR RESULTS IN IN SIMILE-WIDGETS
---------------------------------------------------
+------------------------------------------------------
+HOW TO VISUALIZE DETECTION RESULTS WITH SIMILE-WIDGETS
+------------------------------------------------------
 
-For an experimental map view:
+
+For an experimental map view of the results:
 
 - use JSON output mode (-o json)
 - if summerization enabled (default), move output file to './exhibit/summary/results.json'
 - if summerization enabled (default), open './exhibit/summary/results.hmtl' in your web browser
 - if summerization disabled (-n), move output file to './exhibit/details/results.json'
 - if summerization disabled (-n), open './exhibit/details/results.hmtl' in your web browser
+
 
 For an experimental timline view of the results:
 
