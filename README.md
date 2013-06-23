@@ -54,7 +54,6 @@ A: No.
 --
 [1] http://httpd.apache.org/docs/current/mod/mod_log_config.html
 
-<<<<<<< HEAD
 
 ----------------------------------- KNOWN ISSUES ----------------------------------
 
