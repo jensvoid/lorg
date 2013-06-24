@@ -72,7 +72,7 @@
 
     ; caching:      session|file|database|memcached|none
     caching         = file
-    expiration_time = 600
+    expiration_time = 3600
 
     ; file cache    
     path            = tmp/default_filter.cache
