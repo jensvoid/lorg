@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Lorg by jensvoid</title>
+    <title>lorg by jensvoid</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Lorg</h1>
+        <h1>lorg</h1>
         <p>HTTPD logfile security analysis</p>
 
         <p class="view"><a href="https://github.com/jensvoid/lorg">View the Project on GitHub <small>jensvoid/lorg</small></a></p>
@@ -38,49 +38,11 @@
 
 <p><strong>Q:</strong> <em>What does LORG stand for?</em><br><strong>A:</strong> Emm... 'Logfile Outlier Recognition and Gathering'. Also it's an old Irish word ([ˈl̪ˠɔɾˠə]) for trace, track, trail.</p>
 
-<p><strong>Q:</strong> <em>Why would anyone call a programm LORG?</em><br><strong>A:</strong> All the other cool names had already been taken.</p>
+<p><strong>Q:</strong> <em>Why would anyone call a programm LORG?</em><br><strong>A:</strong> Unfortunately all the other cool names had already been taken.</p>
 
 <p><strong>Q:</strong> <em>What is LORG all about?</em><br><strong>A:</strong> It's a PHP-CLI programm that implements various detection techniques to automatically scan your HTTPD logfiles for attacks against web applications.</p>
 
-<p><strong>Q:</strong> <em>A CLI programm? Why in hell PHP?</em><br><strong>A:</strong> At the beginning it seemes a good idea to easily integrate PHPIDS.</p>
-
-<p><strong>Q:</strong> _ What logfile formats are supported?_<br><strong>A:</strong> Out of the box, common, combined (Apache, nginx) and some more are supported. Other mod_log_config[1]-compatible formats can be easily defined by editing <code>$allowed_input_types</code> in the code.</p>
-
-<p><strong>Q:</strong> <em>What about W3C-extended/IIS log file formats?</em><br><strong>A:</strong> Convert, using e.g. <a href="http://rebex.net/rconvlog/">http://rebex.net/rconvlog/</a></p>
-
-<p><strong>Q:</strong> <em>I have many seperate logfiles to scan!</em><br><strong>A:</strong> Merge, using e.g. <a href="http://code.google.com/p/logmerge">http://code.google.com/p/logmerge</a>. If you have several access.log.n.gz files, try e.g. <code>gunzip access.log.*.gz &amp;&amp; cat access.* &gt; merged.log</code>.</p>
-
-<p><strong>Q:</strong> <em>I want to exclude certain noisy clients (e.g. security scanners) from detection. How to do that?</em><br><strong>A:</strong> Pre-process to logfile using grep/sed/awk.</p>
-
-<p><strong>Q:</strong> <em>How to anonymize logs?</em><br><strong>A:</strong> Pre-process to logfile using grep/sed/awk (on Remote-User, Remote-Logname, IP address, ...).</p>
-
-<p><strong>Q:</strong> <em>Why does the urldecode switch (-u) have no effect on detection results?</em><br><strong>A:</strong> The <code>-u</code> switch only affects visualization in the output file. For detection, all HTTP requests are automatically url-decoded before processing.</p>
-
-<p><strong>Q:</strong> <em>Is it possible to output <em>all</em> incidents (including harmless ones)?</em><br><strong>A:</strong> Yes. Use <code>-t 0</code>.</p>
-
-<p><strong>Q:</strong> <em>How fast is LORG?</em><br><strong>A:</strong> LORG's performance is primarily dependend on the selected detect mode (<code>-d</code>). While mode 'chars' is pretty fast, 'mcshmm' might take more time (while beeing more accurate). Other performance killers are the use of additional attack vectors (<code>-a</code>) and DNS/DNSBL (<code>-h</code>, <code>-b</code>) lookups.</p>
-
-<p><strong>Q:</strong> <em>How to speed it up?</em><br><strong>A:</strong> Try setting <code>$only_check_webapps = true</code> in the code.</p>
-
-<p><strong>Q:</strong> <em>How much memory does LORG require?</em><br><strong>A:</strong> Depending on which detection modes are selected, LORG requires up to the size of the processed logfile.</p>
-
-<p><strong>Q:</strong> <em>How to decrease memory usage?</em><br><strong>A:</strong> Disable summarization (<code>-n</code>).</p>
-
-<p><strong>Q:</strong> <em>Will it work on Windows?</em><br><strong>A:</strong> No.</p>
-
-<h2></h2>
-
-<p>[1] <a href="http://httpd.apache.org/docs/current/mod/mod_log_config.html">http://httpd.apache.org/docs/current/mod/mod_log_config.html</a></p>
-
-<hr><h3>
-<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known Issues</h3>
-
-<ul>
-<li>To make the PHPIDS detection module work, there needs to be a symlink <code>IDS -&gt; .</code> in the phpids/ folder</li>
-<li>Geotargeting is incompatible with an Debian/Ubuntu package 'php5-geoip' installation and then switched off automatically</li>
-<li>When showing the results within an SIMILE Exhibit map, your web browser might hang if more than several thousand results are to be displayed</li>
-<li>And many more...</li>
-</ul>
+<p><strong>Q:</strong> <em>Cool. Where can i get the code and research documents?</em><br><strong>A:</strong> You want to <a href="http://jensvoid.github.io/lorg/">click here</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/jensvoid">jensvoid</a></p>
