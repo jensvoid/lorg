@@ -28,9 +28,9 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 ### RESEARCH
 
-* <https://github.com/jensvoid/lorg/papers/2012-web-application-forensics.pdf>
-* <https://github.com/jensvoid/lorg/papers/2012-webforensik-german.pdf>
-* <https://github.com/jensvoid/lorg/papers/2013-hip-conference-slides.pdf>
+* [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](https://github.com/jensvoid/lorg/papers/2012-web-application-forensics.pdf)
+* [WebForensik - Forensische Analyse von Apache HTTPD Logfiles (German)](https://github.com/jensvoid/lorg/papers/2012-webforensik-german.pdf)
+* [Web Application Forensics - Slides for a talk at Hack in Paris 2013](https://github.com/jensvoid/lorg/papers/2013-hip-conference-slides.pdf)
 
 ### FAQ
 
