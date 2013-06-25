@@ -26,7 +26,7 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 ```
 
-### RESEARCH
+### DOCS
 
 * [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](https://github.com/jensvoid/lorg/papers/2012-web-application-forensics.pdf)
 * [WebForensik - Forensische Analyse von Apache HTTPD Logfiles (German)](https://github.com/jensvoid/lorg/papers/2012-webforensik-german.pdf)
