@@ -1,5 +1,6 @@
-## LORG - A tool for advanced HTTPD logfile security analysis. Pre-alpha.
-**Previously developed as http://sourceforge.net/projects/webforensik/**
+## LORG
+### A tool for advanced HTTPD logfile security analysis.
+**Pre-alpha. Previously developed as http://sourceforge.net/projects/webforensik/**
 
 ### FAQ
 
@@ -22,28 +23,28 @@
 **A:** Convert, using e.g. http://rebex.net/rconvlog/
 
 **Q:** _How do i can various separate logfiles at once?_
-**A:** Merge, using e.g. http://code.google.com/p/logmerge. If you have several access.log.*.gz files, try something like `gunzip access.log.*.gz && cat access.log.* > merged.log'.
+**A:** Merge, using e.g. http://code.google.com/p/logmerge. If you have several access.log.*.gz files, try something like `gunzip access.log.*.gz && cat access.log.* > merged.log`.
 
 **Q:** _I want to exclude certain noisy clients (e.g. legimimate pentesting security scanners) from detection. How to do that?_
-**A:** `grep -v' is your friend.
+**A:** `grep -v` is your friend.
 
 **Q:** _How to anonymize logs?_
-**A:** Pre-process the logfile using grep/sed/awk (on Remote-User, Remote-Logname, IP address, ...).
+**A:** Pre-process the logfile using `grep`/`sed`/`awk` (on Remote-User, Remote-Logname, IP address, ...).
 
-**Q:** _Why does the urldecode switch (-u) have no effect on detection results?_
-**A:** The -u switch only affects visualization (= output file). For detection, all HTTP requests are automatically url-decoded before processing.
+**Q:** _Why does the urldecode switch (`-u`) have no effect on detection results?_
+**A:** The `-u` switch only affects visualization (= output file). For detection, all HTTP requests are automatically url-decoded before processing.
 
 **Q:** _Is it possible to output *all* incidents, including harmless ones?_
-**A:** Yes. Use `-t 0'.
+**A:** Yes. Use `-t 0`.
 
 **Q:** _How fast is LORG?_
-**A:** LORG's performance is primarily dependend on the selected detect mode (-d). While mode 'chars' is pretty fast, 'mcshmm' might take more time (while beeing more accurate).
+**A:** LORG's performance is primarily dependend on the selected detect mode (`-d`). While mode 'chars' is pretty fast, 'mcshmm' might take more time (while beeing more accurate).
 
 **Q:** _How to speed it up?_
-**A:** Try setting `$only_check_webapps = true' in the code. Do not use any additional attack vectors (-a) or DNS/DNSBL (-h, -b) lookups, as they can be performance killers.
+**A:** Try setting `$only_check_webapps = true` in the code. Do not use any additional attack vectors (`-a`) or DNS/DNSBL (`-h`, `-b`) lookups, as they can be performance killers.
 
 **Q:** _How much memory does LORG require?_
-**A:** LORG was written with low memory in mind. Depending on the selected detection modes it might still require up to the size of the processed logfile. If summarization is disabled (`-n'), LORG should not require more than 4MB of memory as all loglines are parsed, analyzed and directly written to the output file without memcaching.
+**A:** LORG was written with low memory in mind. Depending on the selected detection modes it might still require up to the size of the processed logfile. If summarization is disabled (`-n`), LORG should not require more than 4MB of memory as all loglines are parsed, analyzed and directly written to the output file without memcaching.
 
 **Q:** _Will it work on Windows?_
 **A:** No.
