@@ -26,6 +26,12 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 ```
 
+### RESEARCH
+
+* <papers/2012-web-application-forensics.pdf>
+* <papers/2012-webforensik-german.pdf>
+* <papers/2013-hip-conference-slides.pdf>
+
 ### FAQ
 
 **Q:** _What does LORG stand for?_  
