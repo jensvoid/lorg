@@ -33,7 +33,7 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 * [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](https://github.com/jensvoid/lorg/papers/2012-web-application-forensics.pdf)
 * [WebForensik - Forensische Analyse von Apache HTTPD Logfiles (German)](https://github.com/jensvoid/lorg/papers/2012-webforensik-german.pdf)
-* [Web Application Forensics - Slides for a talk at Hack in Paris 2013](https://github.com/jensvoid/lorg/papers/2013-hip-conference-slides.pdf)
+* [Web Application Forensics - Slides for a Talk at Hack in Paris 2013](https://github.com/jensvoid/lorg/papers/2013-hip-conference-slides.pdf)
 
 ### FAQ
 
@@ -50,7 +50,7 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 **A:** At the beginning it seemed a good idea, because PHPIDS could be easily integrated. Then things got bigger than expected...
 
 **Q:** _What logfile formats are supported?_  
-**A:** Out of the box, common, combined (Apache, nginx) and some other formats are supported. All mod_log_config (http://httpd.apache.org/docs/current/mod/mod_log_config.html) compatible formats like `'custom' => '%h %l %u %t \"%r\" %>s %b %{X-Forwarded-For}'` can be read, if defined in `$allowed_input_types` in the code.
+**A:** Out of the box, common, combined (Apache, nginx) and some other formats are supported. All mod_log_config (http://httpd.apache.org/docs/current/mod/mod_log_config.html) compatible formats like `'custom' => '%h %l %u %t \"%r\" %>s %b %{X-Forwarded-For}'` can be parsed, if correctly defined in `$allowed_input_types` in the code.
 
 **Q:** _What about W3C-extended (IIS) log file formats?_  
 **A:** Convert, using e.g. http://rebex.net/rconvlog/
@@ -58,11 +58,8 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 **Q:** _How do i can various separate logfiles at once?_  
 **A:** Merge, using e.g. http://code.google.com/p/logmerge. If you have several access.log.*.gz files, try something like `gunzip access.log.*.gz && cat access.log.* > merged.log`.
 
-**Q:** _I want to exclude certain noisy clients (e.g. legimimate pentesting security scanners) from detection. How to do that?_  
+**Q:** _How to whitelist/exclude certain noisy clients (e.g. legimimate pentesting security scanners) from detection?_  
 **A:** `grep -v` is your friend.
-
-**Q:** _How to anonymize logs?_  
-**A:** Pre-process the logfile using grep/sed/awk (on Remote-User, Remote-Logname, IP address, ...).
 
 **Q:** _Why does the urldecode switch (`-u`) have no effect on detection results?_  
 **A:** The `-u` switch only affects visualization (= output file). For detection, all HTTP requests are automatically url-decoded before processing.
@@ -71,13 +68,10 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 **A:** Yes. Use `-t 0`.
 
 **Q:** _How fast is LORG?_  
-**A:** LORG's performance is primarily dependend on the selected detect mode (`-d`). While mode 'chars' is pretty fast, 'mcshmm' might take more time (while beeing more accurate).
-
-**Q:** _How to speed it up?_  
-**A:** Try setting `$only_check_webapps = true` in the code. Do not use any additional attack vectors (`-a`) or DNS/DNSBL (`-h`, `-b`) lookups, as they can be performance killers.
+**A:** LORG's performance is primarily dependend on the selected detect mode (`-d`). While the 'chars' mode performs acceptable (about 50.000 loglines per minute), advanced learning algorithms like 'mcshmm' will take much longer (while beeing more accurate). To speed up processing, try to set `$only_check_webapps = true` in the code and do not use any additional attack vectors (`-a`) or DNS/DNSBL (`-h`, `-b`) lookups, as they can be performance killers.
 
 **Q:** _How much memory does LORG require?_  
-**A:** LORG was written with low memory in mind. Depending on the selected detection modes it might still require up to the size of the processed logfile. If summarization is disabled (`-n`), LORG should not require more than 4MB of memory as all loglines are parsed, analyzed and directly written to the output file without memcaching.
+**A:** LORG was written with low memory in mind. Depending on the selected detection modes it might still require up to the size of the processed logfile in the worst case. If summarization is disabled (`-n`), LORG should not require more than 4MB of memory as all loglines are parsed, analyzed and directly written to the output file without caching.
 
 **Q:** _Will it work on Windows?_  
 **A:** No.
