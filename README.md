@@ -1,4 +1,5 @@
-LORG - A tool for advanced HTTPD logfile security analysis. Pre-alpha.
+# lorg
+## A tool for advanced HTTPD logfile security analysis. Pre-alpha.
 Previously developed as http://sourceforge.net/projects/webforensik/
 
 --------------------------------------- FAQ ---------------------------------------
