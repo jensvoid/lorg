@@ -1,5 +1,8 @@
 ## LORG
 ### A tool for advanced HTTPD logfile security analysis.
+
+Logfiles are the primary source of information to reconstruct events when network services are compromised. However, extracting the relevant information from huge files can be a difficult task. In this talk, we compare various state of the art approaches to detect attacks against web applications within real-world HTTP traffic logs, including signature-based, statistical and machine learning techniques. Detected incidents are subsequently classified into hand-crafted and automated to distinguish whether the attacker is a man or a machine. Furthermore we present a new approach on how to quantify attacks in terms of success or failure, based on anomalies within the size of HTTP responses which can be derived from logfiles alone.
+
 **Pre-alpha. Previously developed as http://sourceforge.net/projects/webforensik/**
 
 ### USAGE
@@ -47,7 +50,7 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 **A:** At the beginning it seemed a good idea, because PHPIDS could be easily integrated. Then things got bigger than expected...
 
 **Q:** _What logfile formats are supported?_  
-**A:** Out of the box, common, combined (Apache, nginx) and some other formats are supported. All mod_log_config (http://httpd.apache.org/docs/current/mod/mod_log_config.html) compatible formats can be read, if defined in $allowed_input_types in the code.
+**A:** Out of the box, common, combined (Apache, nginx) and some other formats are supported. All mod_log_config (http://httpd.apache.org/docs/current/mod/mod_log_config.html) compatible formats like `'custom' => '%h %l %u %t \"%r\" %>s %b %{X-Forwarded-For}'` can be read, if defined in `$allowed_input_types` in the code.
 
 **Q:** _What about W3C-extended (IIS) log file formats?_  
 **A:** Convert, using e.g. http://rebex.net/rconvlog/
