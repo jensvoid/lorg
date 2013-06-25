@@ -1,7 +1,7 @@
 ## LORG
 ### A tool for advanced HTTPD logfile security analysis.
 
-Logfiles are the primary source of information to reconstruct events when network services are compromised. However, extracting the relevant information from huge files can be a difficult task. LORG aims to implement various state of the art approaches to detect attacks against web applications within HTTP traffic logs (e.g. Apache's acess_log), including signature-based, statistical and machine learning techniques. Detected incidents are subsequently classified into hand-crafted and automated to distinguish whether the attacker is a man or a machine. Furthermore attacks can be quantified in terms of success or failure, based on anomalies within the size of HTTP responses, HTTP response codes or active replay of attacks.
+Web server log files are the primary source of information to reconstruct events when vulnerable web applications have been exploited. However, extracting the relevant information from huge files can be a difficult task. LORG aims to implement various state of the art approaches to detect attacks against web applications within HTTP traffic logs (e.g. Apache's access_log), including signature-based, statistical and machine learning techniques. Detected incidents are subsequently classified into hand-crafted and automated to distinguish whether the attacker is a man or a machine. GeoIP- and DNSBL lookups can be performed to see if the attacker originates from a certain geolocation or botnet. Furthermore attacks can be quantified in terms of success or failure, based on anomalies within the size of HTTP responses, HTTP response codes or active replay of attacks.
 
 **Pre-alpha. Previously developed as http://sourceforge.net/projects/webforensik/**
 
