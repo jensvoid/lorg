@@ -3,7 +3,7 @@
 
 Web server log files are the primary source of information to reconstruct the course of events when vulnerable web applications are exploited. However, extracting the relevant information from huge files can be a difficult task. LORG aims to implement various state of the art approaches to detect attacks against web applications within HTTP traffic logs (e.g. Apache's access_log), including signature-based, statistical and machine learning techniques. Detected incidents are subsequently classified into hand-crafted and automated to distinguish whether the attacker is a man or a machine. GeoIP- and DNSBL lookups can be performed to see if the attacks originate from a certain geolocation or botnet. Furthermore attacks can be quantified in terms of success or failure, based on anomalies within the size of HTTP responses, HTTP response codes or active replay of attacks.
 
-**Pre-alpha. Previously developed as http://sourceforge.net/projects/webforensik/**
+**Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/)**
 
 ### USAGE
 ```
@@ -50,13 +50,13 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 **A:** At the beginning it seemed a good idea, because PHPIDS could be easily integrated. Then things got bigger than expected...
 
 **Q:** _What logfile formats are supported?_  
-**A:** Out of the box, common, combined (Apache, nginx) and some other formats are supported. All mod_log_config (http://httpd.apache.org/docs/current/mod/mod_log_config.html) compatible formats like `'custom' => '%h %l %u %t \"%r\" %>s %b %{X-Forwarded-For}'` can be parsed, if correctly defined in `$allowed_input_types` in the code.
+**A:** Out of the box, common, combined (Apache, nginx) and some other formats are supported. All [mod_log_config](http://httpd.apache.org/docs/current/mod/mod_log_config.html)-compatible formats like `'custom' => '%h %l %u %t \"%r\" %>s %b %{X-Forwarded-For}'` will do, if defined in `$allowed_input_types` in the code.
 
 **Q:** _What about W3C-extended (IIS) log file formats?_  
-**A:** Convert, using e.g. http://rebex.net/rconvlog/
+**A:** Convert, using e.g. [rconvlog](http://rebex.net/rconvlog/)
 
 **Q:** _How do i can various separate logfiles at once?_  
-**A:** Merge, using e.g. http://code.google.com/p/logmerge. If you have several access.log.*.gz files, try something like `gunzip access.log.*.gz && cat access.log.* > merged.log`.
+**A:** Merge, using e.g. [logmerge](http://code.google.com/p/logmerge). If you have several access.log.*.gz files, try something like `gunzip access.log.*.gz && cat access.log.* > merged.log`.
 
 **Q:** _How to whitelist/exclude certain noisy clients (e.g. legimimate pentesting security scanners) from detection?_  
 **A:** `grep -v` is your friend.
