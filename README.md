@@ -3,7 +3,7 @@
 
 Web server log files are the primary source of information to reconstruct the course of events when vulnerable web applications are exploited. However, extracting the relevant information from huge files can be a difficult task. LORG aims to implement various state of the art approaches to detect attacks against web applications within HTTP traffic logs (e.g. Apache's access_log), including signature-based, statistical and machine learning techniques. Detected incidents are subsequently classified into hand-crafted and automated to distinguish whether the attacker is a man or a machine. GeoIP- and DNSBL lookups can be performed to see if the attacks originate from a certain geolocation or botnet. Furthermore attacks can be quantified in terms of success or failure, based on anomalies within the size of HTTP responses, HTTP response codes or active replay of attacks.
 
-**Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/)**
+**Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/).**
 
 ### USAGE
 ```
