@@ -55,6 +55,9 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 **Q:** _What about W3C-extended (IIS) log file formats?_  
 **A:** Convert, using e.g. [rconvlog](http://rebex.net/rconvlog/)
 
+**Q:** _Shouldn't we have a look at Apache's error_log files, in addition to access_logs?_
+**A:** From a forenscis perspective: absolutely! At the moment, automated parsing and interpretation of error_log files is not implemented, however this might become a feauture in the future.
+
 **Q:** _How do i can various separate logfiles at once?_  
 **A:** Merge, using e.g. [logmerge](http://code.google.com/p/logmerge). If you have several access.log.*.gz files, try something like `gunzip access.log.*.gz && cat access.log.* > merged.log`.
 
@@ -75,7 +78,6 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 **Q:** _Will it work on Windows?_  
 **A:** No.
-
 
 ### KNOWN ISSUES
 
