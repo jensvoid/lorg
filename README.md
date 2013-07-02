@@ -1,3 +1,4 @@
+[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
 <iframe width="420" height="345" src="http://www.youtube.com/embed/i-aRSOtFuV0?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ## LORG
