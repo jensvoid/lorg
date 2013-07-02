@@ -5,11 +5,11 @@ Web server log files are the primary source of information to reconstruct the co
 
 **Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/).**
 
-### GETTING STARTED
+### Getting started
 
-Read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/)
+Read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/).
 
-### USAGE
+### Usage
 ```
 Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
             [-a add_vector] [-c client_ident] [-b dnsbl_type]
@@ -33,7 +33,7 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 ```
 
-### ADDITIONAL RESOURCES
+### Additional Resources
 
 * Presentation [2013]: [Web Application Forensics - Slides for a Talk at Hack in Paris 2013](https://github.com/jensvoid/lorg/tree/master/papers/2013-hip-conference-slides.pdf)
 * Thesis [2012]: [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](https://github.com/jensvoid/lorg/tree/master/papers/2012-web-application-forensics.pdf)
