@@ -7,11 +7,10 @@ Web server log files are the primary source of information to reconstruct the co
 
 ### Getting started
 
-For the impatient, try something like
+To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/). For the impatient, try something like
 ```
-./lorg -u -h -g /path/to/access_log
+./lorg -u -g /path/to/access_log
 ```
-To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/).
 
 ### Usage
 ```
