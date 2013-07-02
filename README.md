@@ -7,9 +7,9 @@ Web server log files are the primary source of information to reconstruct the co
 
 ### Getting started
 
-To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/). For the impatient, try something like
+To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/). For the impatient, try something like:
 ```
-./lorg -u -g /path/to/access_log
+./lorg -d phpids -u -g /path/to/access_log
 ```
 
 ### Usage
