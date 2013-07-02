@@ -5,8 +5,12 @@ Web server log files are the primary source of information to reconstruct the co
 
 **Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/).**
 
-### Documentation
+### Getting started
 
+For the impatient, try something like
+```
+./lorg -u -h -g /path/to/access_log
+```
 To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/).
 
 ### Usage
