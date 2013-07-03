@@ -42,4 +42,4 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 * Thesis [2012]: [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](https://github.com/jensvoid/lorg/tree/master/papers/2012-web-application-forensics.pdf)
 * Project Description [2012, German]: [WebForensik - Forensische Analyse von Apache HTTPD Logfiles](https://github.com/jensvoid/lorg/tree/master/papers/2012-webforensik-german.pdf)
 
-[![WebAppForensics Talk @HiP2013](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://www.youtube.com/watch?v=6N7WjZJ1ytY)
+[![WebAppForensics Talk @HiP2013](https://github.com/jensvoid/lorg/blob/gh-pages/images/hip2013-video.jpg?raw=true)](https://www.youtube.com/watch?v=6N7WjZJ1ytY)
