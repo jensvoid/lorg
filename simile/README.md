@@ -8,7 +8,7 @@ For an experimental **map view** of the results:
 * if summerization enabled (default)
   * move output file to `./exhibit/summary/results.json`
   * open `./exhibit/summary/results.hmtl` in your favorite web browser
-* if summerization disabled (`-n`)
+* else, if summerization disabled (`-n`)
   * move output file to `./exhibit/details/results.json`
   * open `./exhibit/details/results.hmtl` in your favorite web browser
 
