@@ -1,5 +1,6 @@
-### HOW TO VISUALIZE DETECTION RESULTS WITH SIMILE-WIDGETS
+### How to visualize detection results with SIMILE-widgets?
 
+[SIMILE-Widgets](http://www.simile-widgets.org) are a great way for data visualization. LORG currently supports the *Exhibit* (filterable wordlmap) and *Timeline* widgets.
 
 For an experimental **map view** of the results:
 
