@@ -63,7 +63,7 @@
 
     wrapper         = "mysql:host=localhost;port=3306;dbname=phpids"
     user            = root
-    password        = webf00l
+    password        = root
     table           = intrusions
 
 ; If you would like to use other methods than file caching you can configure them here
@@ -80,7 +80,7 @@
     ; database cache
     wrapper         = "mysql:host=localhost;port=3306;dbname=phpids"   
     user            = root
-    password        = webf00l
+    password        = root
     table           = cache
 
     ; memcached     
