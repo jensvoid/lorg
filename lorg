@@ -210,19 +210,25 @@ foreach(getopt("i:o:d:a:c:b:q:t:v:nuhgp") as $opt => $value)
       break;
 
     case 'd':
-      $detect_mode = array($value);
-      // check for correct detection mode
-      if (in_array($detect_mode[0], $allowed_detect_modes) == false)
-      {
-        print_message(0, "[!] Detect mode '$detect_mode[0]' not allowed\n");
-        usage_die();
+      if (is_array($value)) {
+      	$detect_mode = $value;
+      } else {
+        $detect_mode = array($value);
+      }
+      foreach ($detect_mode as $mode) {
+        // check for correct detection mode
+        if (in_array($detect_mode[0], $allowed_detect_modes) == false)
+        {
+          print_message(0, "[!] Detect mode '$detect_mode[0]' not allowed\n");
+          usage_die();
+        }
       }
       // if all selected, create array of detection modes
-      if ($detect_mode[0] == 'all')
+      if (in_array($detect_mode, 'all'))
       {
         $detect_mode = $allowed_detect_modes;
         array_pop($detect_mode); // remove element 'all'
-		  }
+      }
       // remove switch and option from argument vector
       if (strlen($argv[0]) <= 2) array_shift($argv); array_shift($argv);
       break;
