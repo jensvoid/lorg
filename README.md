@@ -5,12 +5,17 @@ Web server log files are the primary source of information to reconstruct the co
 
 **Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/).**
 
+### Installation
+
+The easiest way to install LORG is to clone the GitHub repository:
+
+    $ git clone https://github.com/jensvoid/lorg
+
 ### Getting started
 
 To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/). For the impatient, try something like:
-```
-./lorg -d phpids -u -g /path/to/access_log
-```
+
+    $ ./lorg -d phpids -u -g /path/to/access_log
 
 ### Usage
 ```
@@ -38,7 +43,7 @@ Usage: lorg [-i input_type] [-o output_type] [-d detect_mode]
 
 ### Additional Resources
 
-* Presentation [2013]: [Web Application Forensics - Slides for a Talk at Hack in Paris 2013](http://homepage.ruhr-uni-bochum.de/jens.mueller-2/publications/2013-hip-conference-slides.pdf)  
+* Conference Presentation [2013]: [Web Application Forensics - Slides for a Talk at Hack in Paris 2013](http://homepage.ruhr-uni-bochum.de/jens.mueller-2/publications/2013-hip-conference-slides.pdf)  
   [![WebAppForensics Talk @HiP2013](https://github.com/jensvoid/lorg/blob/gh-pages/images/hip2013-video.jpg?raw=true)](https://www.youtube.com/watch?v=6N7WjZJ1ytY)
-* Thesis [2012]: [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](http://homepage.ruhr-uni-bochum.de/jens.mueller-2/publications/2012-web-application-forensics.pdf)
+* Bachelor Thesis [2012]: [Implementation of a Framework for Advanced HTTPD Logfile Security Analysis](http://homepage.ruhr-uni-bochum.de/jens.mueller-2/publications/2012-web-application-forensics.pdf)
 * Project Description [2012, German]: [WebForensik - Forensische Analyse von Apache HTTPD Logfiles](http://homepage.ruhr-uni-bochum.de/jens.mueller-2/publications/2012-webforensik.pdf)
