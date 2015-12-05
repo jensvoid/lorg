@@ -5,13 +5,11 @@ Web server log files are the primary source of information to reconstruct the co
 
 **Pre-alpha. Previously developed as [WebForensik](http://sourceforge.net/projects/webforensik/).**
 
-### Installation
+### Getting started
 
 The easiest way to install LORG is to clone the GitHub repository:
 
     $ git clone https://github.com/jensvoid/lorg
-
-### Getting started
 
 To get started, please read the documentation in the [Wiki](https://github.com/jensvoid/lorg/wiki/). For the impatient, try something like:
 
