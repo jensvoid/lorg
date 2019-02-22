@@ -66,9 +66,8 @@
                         "7"=>array("R"=>224,"G"=>176,"B"=>46,"Alpha"=>100));
 
    /* Class creator */
-   function pData()
-    {
-     $this->Data = "";
+   function pData() {
+     $this->Data = [];
      $this->Data["XAxisDisplay"]	= AXIS_FORMAT_DEFAULT;
      $this->Data["XAxisFormat"]		= NULL;
      $this->Data["XAxisName"]		= NULL;
@@ -76,7 +75,7 @@
      $this->Data["Abscissa"]		= NULL;
      $this->Data["AbsicssaPosition"]	= AXIS_POSITION_BOTTOM;
 
-     $this->Data["Axis"][0]["Display"]  = AXIS_FORMAT_DEFAULT;
+     $this->Data["Axis"][0]["Display"] = AXIS_FORMAT_DEFAULT;
      $this->Data["Axis"][0]["Position"] = AXIS_POSITION_LEFT;
      $this->Data["Axis"][0]["Identity"] = AXIS_Y;
     }
@@ -264,7 +263,7 @@
 
    /* Mark all series as drawable */
    function drawAll()
-    { foreach($this->Data["Series"] as $Key => $Value) { if ( $this->Data["Abscissa"] != $Key ) { $this->Data["Series"][$Key]["isDrawable"]=TRUE; } } }    
+    { foreach($this->Data["Series"] as $Key => $Value) { if ( $this->Data["Abscissa"] != $Key ) { $this->Data["Series"][$Key]["isDrawable"]=TRUE; } } }
 
    /* Return the average value of the given serie */
    function getSerieAverage($Serie)
@@ -605,7 +604,7 @@
        $this->Data["Series"][$Serie]["Color"]["Alpha"] = 100;
       }
     }
-     
+
    function normalize($NormalizationFactor=100,$UnitChange=NULL,$Round=1)
     {
      $Abscissa = $this->Data["Abscissa"];
@@ -774,14 +773,14 @@
 
    /* Convert a string to a single elements array */
    function convertToArray($Value)
-    { $Values = ""; $Values[] = $Value; return($Values); }
+    { $Values = []; $Values[] = $Value; return($Values); }
 
    /* Class string wrapper */
    function __toString()
     { return("pData object."); }
 
-   function left($value,$NbChar)	{ return substr($value,0,$NbChar); }  
-   function right($value,$NbChar)	{ return substr($value,strlen($value)-$NbChar,$NbChar); }  
-   function mid($value,$Depart,$NbChar)	{ return substr($value,$Depart-1,$NbChar); }  
+   function left($value,$NbChar)	{ return substr($value,0,$NbChar); }
+   function right($value,$NbChar)	{ return substr($value,strlen($value)-$NbChar,$NbChar); }
+   function mid($value,$Depart,$NbChar)	{ return substr($value,$Depart-1,$NbChar); }
   }
 ?>
