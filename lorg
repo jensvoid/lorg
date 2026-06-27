@@ -2040,7 +2040,7 @@ function detection_phpids($threshold, $request, $phpids_path, $phpids_init, &$ta
   catch (Exception $e)
   {
     // sth went terribly wrong
-    print_message(0, "[!] PHPIDS error occured: " . $e->getMessage() . "\n");
+    print_message(0, "[!] PHPIDS error occurred: " . $e->getMessage() . "\n");
     return null;
   }
 
@@ -3505,7 +3505,7 @@ function convert_using_phpids(&$str, $key, $phpids_data)
   catch (Exception $e)
   {
     // sth went terribly wrong
-    print_message(0, "[!] PHPIDS error occured: " . $e->getMessage() . "\n");
+    print_message(0, "[!] PHPIDS error occurred: " . $e->getMessage() . "\n");
     return null;
   }
 }
